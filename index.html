@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+    <div class="logo-section">
+        <div class="logo-icon">₹</div>
+        <div class="logo-text">MoneyVista</div>
+    </div>
+
+    <div class="profile-card">
+        <div class="avatar">JP</div>
+        <div class="profile-info">
+            <h3>Jaya Patidar</h3>
+            <p>Administrator</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li class="active">🏠 Dashboard</li>
+            <li>💳 Transactions</li>
+            <li>📊 Insights</li>
+            <li>⚙️ Settings</li>
+        </ul>
+    </nav>
+
+    <div class="role-box">
+        <label>Switch Role</label>
+        <select id="roleSelect">
+            <option>Admin</option>
+            <option>Viewer</option>
+        </select>
+    </div>
+
+    <div class="sidebar-card">
+        <h4>Monthly Goal</h4>
+        <p>₹50,000 Saved</p>
+    </div>
+
+</aside>
+    
+        <main class="main">
+
+    
+            <header class="header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, Jaya 👋</p>
+                </div>
+
+                <div class="header-actions">
+                    <input type="text" id="searchInput" placeholder="Search transactions...">
+                    <button id="addBtn">+ Add Transaction</button>
+                </div>
+            </header>
+
+            
+            <section class="cards">
+                <article class="card purple">
+                    <h3>Net Balance</h3>
+                    <p>₹4.32L</p>
+                </article>
+
+                <article class="card green">
+                    <h3>Total Income</h3>
+                    <p>₹6.49L</p>
+                </article>
+
+                <article class="card yellow">
+                    <h3>Total Expenses</h3>
+                    <p>₹2.17L</p>
+                </article>
+
+                <article class="card pink">
+                    <h3>Savings Rate</h3>
+                    <p id="savingPercent">66.5%</p>
+                </article>
+            </section>
+
+            <!-- Charts -->
+            <section class="charts">
+                <article class="chart-box">
+                    <h2>Income vs Expense Trend</h2>
+                    <canvas id="trendChart"></canvas>
+                </article>
+
+                <article class="chart-box">
+                    <h2>Spending by Category</h2>
+                    <canvas id="donutChart"></canvas>
+                </article>
+            </section>
+              <section class="transactions-section">
+    <article class="chart-box">
+        <h2>Recent Transactions</h2>
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02 Apr 2026</td>
+                    <td>₹4,500</td>
+                    <td>Shopping</td>
+                    <td>Expense</td>
+                </tr>
+                <tr>
+                    <td>03 Apr 2026</td>
+                    <td>₹25,000</td>
+                    <td>Salary</td>
+                    <td>Income</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+            
+            <section class="health-cards">
+                <article class="health red-box">
+                    <h3>Spending Up</h3>
+                    <p>Your expenses increased by ₹5.9K</p>
+                </article>
+
+                <article class="health blue-box">
+                    <h3>Latest Savings Rate</h3>
+                    <p>66.2% of last month income</p>
+                </article>
+
+                <article class="health orange-box">
+                    <h3>Top Expense Category</h3>
+                    <p>Housing ₹1.32L</p>
+                </article>
+
+                <article class="health green-box">
+                    <h3>Net Financial Position</h3>
+                    <p>Net positive ₹4.32L</p>
+                </article>
+            </section>
+
+            
+            <section class="health-main">
+                <article class="health-box">
+                    <h2>Savings Health</h2>
+                    <div class="big-percent">66.5%</div>
+                    <p>Excellent savings!</p>
+                </article>
+            </section>
+            
+            
+            <footer class="footer">
+                © 2026 Personal Finance Dashboard
+            </footer>
+
+        </main>
+    </div>
+
+    
+    <script src="data/transactions.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

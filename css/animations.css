@@ -1,0 +1,11 @@
+.card,
+.chart-box,
+.health{
+    transition:0.3s;
+}
+
+.card:hover,
+.chart-box:hover,
+.health:hover{
+    transform:translateY(-5px);
+}
